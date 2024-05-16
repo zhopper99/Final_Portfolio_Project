@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [Header ("Health")]
+    [Header("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
@@ -14,6 +14,14 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOFFlashes;
     private SpriteRenderer spriteRend;
 
+    [Header("Components")]
+    [SerializeField] private Behaviour[] components;
+    private bool invulnerable;
+
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hurtSound;
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -23,20 +31,26 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
+        if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
+            SoundManager.instance.PlaySound(hurtSound);
         }
         else
         {
             if (!dead)
             {
                 anim.SetTrigger("die");
-                GetComponent<PlayerMovement>().enabled = false;
+
+                foreach (Behaviour component in components)
+                    component.enabled = false;
+
                 dead = true;
+                SoundManager.instance.PlaySound(deathSound);
             }
         }
     }
@@ -48,6 +62,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invunerability()
     {
+        invulnerable = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
         for (int i = 0; i < numberOFFlashes; i++)
         {
@@ -57,5 +72,11 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFramesDurations / (numberOFFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(10, 11, false);
+        invulnerable = false;
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
