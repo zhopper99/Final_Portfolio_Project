@@ -283,6 +283,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &493138558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493138559}
+  - component: {fileID: 493138563}
+  - component: {fileID: 493138562}
+  - component: {fileID: 493138561}
+  - component: {fileID: 493138560}
+  m_Layer: 5
+  m_Name: Controlstxt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493138559
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493138558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 578299937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -492.39005, y: 49.14}
+  m_SizeDelta: {x: 984.78, y: 1124.359}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493138560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493138558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &493138561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493138558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 0, y: -11.61}
+  m_UseGraphicAlpha: 1
+--- !u!114 &493138562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493138558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.6262374, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d880327fab498504ba83ca7b73e79508, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 100
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Space : Jump
+
+    A : Move Left
+
+    D : Move Right
+
+    L Click/E : Shoot/Select
+
+    Esc
+    : Pause'
+--- !u!222 &493138563
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493138558}
+  m_CullTransparentMesh: 1
 --- !u!1 &506747762
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578299937}
   m_Layer: 5
-  m_Name: GameStartScreen
+  m_Name: GameControlScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,6 +508,7 @@ RectTransform:
   m_Children:
   - {fileID: 506747763}
   - {fileID: 908102470}
+  - {fileID: 493138559}
   - {fileID: 2058060054}
   - {fileID: 779528885}
   m_Father: {fileID: 1741533024}
@@ -449,7 +570,7 @@ GameObject:
   - component: {fileID: 908102472}
   - component: {fileID: 908102471}
   m_Layer: 5
-  m_Name: Titletxt
+  m_Name: ControlsTitletxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,8 +592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: 209.78194}
-  m_SizeDelta: {x: 1015.97, y: 271.148}
+  m_AnchoredPosition: {x: -610, y: 410}
+  m_SizeDelta: {x: 899.045, y: 166.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908102471
 MonoBehaviour:
@@ -530,14 +651,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 300
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Adventure!
+  m_Text: Controls
 --- !u!222 &908102474
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -561,7 +682,7 @@ GameObject:
   - component: {fileID: 1200712410}
   - component: {fileID: 1200712409}
   m_Layer: 5
-  m_Name: ControlsMenutxt
+  m_Name: MainMenutxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: -206}
+  m_AnchoredPosition: {x: 557.18, y: 54}
   m_SizeDelta: {x: 855.204, y: 195.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200712409
@@ -630,9 +751,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1741533020}
-        m_TargetAssemblyTypeName: StartUIManager, Assembly-CSharp
-        m_MethodName: ControlsMenu
+      - m_Target: {fileID: 1741533025}
+        m_TargetAssemblyTypeName: ControlsUIManager, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -705,7 +826,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits / Controls
+  m_Text: Main Menu
 --- !u!222 &1200712413
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -751,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: 1}
+  m_AnchoredPosition: {x: 557.18, y: 264}
   m_SizeDelta: {x: 855.204, y: 195.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303163403
@@ -798,8 +919,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1741533020}
-        m_TargetAssemblyTypeName: StartUIManager, Assembly-CSharp
+      - m_Target: {fileID: 1741533025}
+        m_TargetAssemblyTypeName: ControlsUIManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -894,7 +1015,7 @@ GameObject:
   - component: {fileID: 1741533023}
   - component: {fileID: 1741533022}
   - component: {fileID: 1741533021}
-  - component: {fileID: 1741533020}
+  - component: {fileID: 1741533025}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -902,19 +1023,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1741533020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741533019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45dc733532593b442a15e05b22b90618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameStartScreen: {fileID: 578299936}
 --- !u!114 &1741533021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +1107,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1741533025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741533019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b3cb2d81fbe9943b57532ea6d24058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameControlsScreen: {fileID: 578299936}
 --- !u!1 &1865906136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: -409}
+  m_AnchoredPosition: {x: 557.18, y: -141.11}
   m_SizeDelta: {x: 855.204, y: 195.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865906138
@@ -1083,8 +1204,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1741533020}
-        m_TargetAssemblyTypeName: StartUIManager, Assembly-CSharp
+      - m_Target: {fileID: 1741533025}
+        m_TargetAssemblyTypeName: ControlsUIManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1204,7 +1325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: 7}
+  m_AnchoredPosition: {x: 32, y: 296}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058060055
