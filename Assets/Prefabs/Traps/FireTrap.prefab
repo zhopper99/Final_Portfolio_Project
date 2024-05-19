@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  activationDelay: 2
+  activationDelay: 0.75
   activeTime: 2
   firetrapSound: {fileID: 8300000, guid: 330864d2b2474614b924796086cf4fc1, type: 3}
 --- !u!95 &4003418412611086868
