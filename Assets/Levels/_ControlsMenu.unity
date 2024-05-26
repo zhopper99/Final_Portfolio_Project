@@ -391,10 +391,7 @@ MonoBehaviour:
 
     D : Move Right
 
-    L Click/E : Shoot/Select
-
-    Esc
-    : Pause'
+    L Click/E : Shoot/Select'
 --- !u!222 &493138563
 CanvasRenderer:
   m_ObjectHideFlags: 0
